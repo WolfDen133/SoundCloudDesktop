@@ -6,7 +6,8 @@
   "author": "WolfDen133",
   "scripts": {
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "start": "electron-forge start"
   },
   "license": "MIT",
   "devDependencies": {
