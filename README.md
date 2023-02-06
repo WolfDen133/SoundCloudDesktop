@@ -15,7 +15,7 @@ It does just that! Soundcloud right at your finger tips!
 > ### To clone the repo 
 > ``` git clone https://github.com/wolfden133/soundclouddesktop.git ```
 
-> ### Then navigated into the cloned directory
+> ### Then navigate into the cloned directory
 > `cd SoundCloudDesktop`
 
 
