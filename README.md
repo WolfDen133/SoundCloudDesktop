@@ -31,4 +31,4 @@ The application files should be located `SoundCloudDesktop\out\soundcloud-win32-
 
 # Installer 
 
-The installer can be found [here]()
+The installer can be found [here](https://github.com/WolfDen133/SoundCloudDesktop/releases)
