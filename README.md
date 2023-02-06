@@ -9,6 +9,7 @@ It does just that! Soundcloud right at your finger tips!
 
 - **Author**: WolfDen133
 - **Version**: `1.1`
+- **OS**: `widows only`
 
 # Cloning and building
 
