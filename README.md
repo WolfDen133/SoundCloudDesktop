@@ -19,7 +19,7 @@ It does just that! Soundcloud right at your finger tips!
 > `cd SoundCloudDesktop`
 
 
-> ### Then install dependancys
+> ### Then install dependancies
 > `npm install`
 
 
