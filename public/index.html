@@ -1,0 +1,138 @@
+<!doctype html>
+<head>
+  <script> const { ipcRenderer } = require('electron') </script>
+</head>
+<html lang="en">
+<body>
+  <div class="title-bar">
+    <div class="draggable"></div>
+    <div class="icon-holder">
+      <img class="icon" src="../assets/icon.png" alt="">
+      <img class="icon" src="../assets/logo.png" alt="">
+    </div>
+    <div class="action-buttons">
+      <div class="button" id="minimise">
+        <img class="action-icon" src="../assets/svg/minimise.svg" alt="">
+      </div>
+      <div class="button" id="maximise">
+      <img class="action-icon" src="../assets/svg/maximise.svg" alt="">
+      </div>
+      <div class="button" id="close">
+        <img class="action-icon" src="../assets/svg/close.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="offline hide" id="offline">
+      <h1>Connection failed...</h1>
+      <p>Please connect to the internet to continue.</p>
+      <button onclick="reload()">Click here to reload</button>
+    </div>
+  </div>
+</body>
+<style>
+
+  @font-face {
+    font-family: Interstate;
+    src: local("../assets/font/Interstate Bold.otf");
+  }
+
+  body {
+    margin: unset;
+    padding: unset;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content * {
+    flex-grow: 1;
+  }
+
+  .icon-holder {
+    position: fixed;
+    height: 32px;
+    max-height: 32px;
+    display: inline-block;
+    padding: 8px;
+  }
+
+  .action-buttons {
+    float: right;
+    max-height: 32px;
+  }
+
+  .draggable {
+    position: fixed;
+    height: 32px;
+    width: calc(100% - 128px);
+    -webkit-app-region: drag;
+
+  }
+
+  .button:hover {
+    background-color: rgba(84, 44, 23, 0.84);
+    cursor: pointer;
+  }
+
+  .button {
+    display: inline-block;
+    height: 32px;
+    transition: background-color ease-in-out 0.1s;
+  }
+
+  .button img {
+    padding: 8px 12px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .action-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .title-bar {
+    width: 100%;
+    height: 32px;
+    background-color: #f50;
+    position: fixed;
+    user-select: none;
+  }
+
+  .icon {
+    height: 16px;
+    display: inline-block;
+  }
+
+  .offline {
+    padding: 60px;
+  }
+</style>
+</html>
+<script>
+
+  document.getElementById('minimise').addEventListener('click', () => {
+    ipcRenderer.send("window-action", "minimise");
+  })
+  document.getElementById('maximise').addEventListener('click', () => {
+    ipcRenderer.send("window-action", "maximise");
+  })
+  document.getElementById('close').addEventListener('click', () => {
+    ipcRenderer.send("window-action", "close");
+  })
+
+  reload();
+
+  function reload () {
+    if (window.navigator.onLine) {
+      ipcRenderer.send("web-action", "load");
+    } else { document.getElementById("offline").classList.remove('hide')}
+  }
+</script>
