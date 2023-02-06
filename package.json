@@ -1,13 +1,13 @@
 {
   "name": "soundcloud",
-  "version": "0.0.1",
+  "version": "1.3.0",
   "description": "Simple electron app to access soundcloud from your desktop.",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "WolfDen133",
   "scripts": {
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "start": "electron-forge start"
+    "package": "electron-forge package /src/",
+    "make": "electron-forge make /src/",
+    "start": "electron-forge start /src/"
   },
   "license": "MIT",
   "devDependencies": {
@@ -21,22 +21,19 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"
   },
-  "build": {
-    "appId": "com.wolfden.soundclouddesktop",
-    "productName": "SoundCloudDesktop",
-    "directories": {
-      "output": "out"
-    },
-    "linux": {
-      "target": [
-        "AppImage",
-        "pacman"
-      ]
-    },
-    "win": {
-      "target": [
-        "portable"
-      ]
-    }
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WolfDen133/SoundCloudDesktop.git"
+  },
+  "keywords": [
+    "sound",
+    "cloud",
+    "soundcloud",
+    "desktop",
+    "scd"
+  ],
+  "bugs": {
+    "url": "https://github.com/WolfDen133/SoundCloudDesktop/issues"
+  },
+  "homepage": "https://github.com/WolfDen133/SoundCloudDesktop#readme"
 }
