@@ -7,8 +7,8 @@ A simple electonjs app to allow the access of soundcloud right on your desktop.
 
 It does just that! Soundcloud right at your finger tips!
 
-**Author**: WolfDen133
-**Version**: `1.1`
+- **Author**: WolfDen133
+- **Version**: `1.1`
 
 # Cloning and building
 
