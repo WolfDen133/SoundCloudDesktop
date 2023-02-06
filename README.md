@@ -12,18 +12,18 @@ It does just that! Soundcloud right at your finger tips!
 
 # Cloning and building
 
-> ## To clone the repo 
+> ### To clone the repo 
 > ``` git clone https://github.com/wolfden133/soundclouddesktop.git ```
 
-> # Then navigated into the cloned directory
+> ### Then navigated into the cloned directory
 > `cd SoundCloudDesktop`
 
 
-> ## Then install dependancys
+> ### Then install dependancys
 > `npm install`
 
 
-> ## To build the project
+> ### To build the project
 > `npm run make`
 
 And your done! 
